@@ -1,0 +1,28 @@
+<% if(db_rows_array.length > 0){ %>
+    
+    <h1> Records</h1>
+
+    <a href="/add"> Add</a>
+    <table border="1">
+        <tr>
+            <th>Product Id</th>
+            <th>Product name</th>
+            <th>Product details</th>
+            <th>Product price</th>
+            <th> Operation</th>
+        </tr>
+        <% for(var i=0; i<db_rows_array.length;i++){   %>
+            <tr>
+                <td> <%= db_rows_array[i].product_id %></td>
+                <td> <%= db_rows_array[i].product_name %></td>
+                <td> <%= db_rows_array[i].product_details %></td>
+                <td> <%= db_rows_array[i].product_price %></td>
+                <td> <a href=' /edit/<%= db_rows_array[i].product_id %>'> EDIT </a>  | <a href='/delete/<%= db_rows_array[i].product_id %>'>DELETE</a> </td>
+            </tr>
+           
+
+            <%  } %>
+    </table>
+    <% } else { %>
+        No records found
+        <% } %>

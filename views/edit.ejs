@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>
+            update
+        </title>
+    </head>
+
+    <body>
+        <h1> update record</h1>
+
+        <a href="/display"> Display</a>
+        <form method="post">
+            Name <input type="text" name="txt1" value="<%= db_rows_array[0].product_name %>"  required>
+            Details <input type="text" name="txt2" value="<%= db_rows_array[0].product_details %>"  required>
+            Price <input type="number" name="txt3" value="<%= db_rows_array[0].product_price %>"  required>
+           
+         <input type="submit" >
+
+        </form>
+    </body>
+</html>
